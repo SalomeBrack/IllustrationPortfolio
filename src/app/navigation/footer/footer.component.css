@@ -3,7 +3,7 @@
     height: 100%;
     position: relative;
     overflow: hidden;
-    background-color: var(--color-light-gray);
+    background-color: var(--light-gray);
 }
 
 .align-left, .align-right {
@@ -47,3 +47,5 @@ path { fill: white; }
 #twitter { height: 18px; padding-top: 1px; }
 #youtube { height: 18px; padding-top: 2px; }
 #shop { height: 16px; padding-top: 1px; }
+
+.hidden { display: none; }

@@ -1,0 +1,16 @@
+.footer-fill {
+    padding-inline: 20px;
+}
+
+.headline {
+    padding-top: 20px;
+    line-height: 2;
+    color: var(--pink);
+    font-size: medium;
+    font-weight: normal;
+}
+
+p {
+    line-height: 0.8;
+    font-size: small;
+}

@@ -3,7 +3,7 @@
     height: 100%;
     position: relative;
     overflow: hidden;
-    background-color: var(--color-gray);
+    background-color: var(--gray);
 }
 
 .align-left, .align-right {
@@ -46,7 +46,7 @@
 .side-nav { margin-right: 20px; }
 
 .icon-button, .top-menu .no-click { color: white; }
-.icon-button { &:focus, &:hover { color: var(--color-pink); } }
+.icon-button { &:focus, &:hover { color: var(--pink); } }
 
 #top-menu { display: flex; }
 #side-nav { display: none; }
@@ -57,15 +57,16 @@
 }
 
 .active-top {
-    background-color: var(--color-pink);
+    background-color: var(--pink);
 }
 
 .active-menu {
-    color: var(--color-pink);
+    color: var(--pink);
 }
 
 .side-nav-button {
     font-family: inherit;
+    background-color: transparent;
 }
 
 .no-click {
