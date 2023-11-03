@@ -1,2 +1,5 @@
 User-agent: *
+
+Disallow: /imprint
+Disallow: /404
 Allow: /
