@@ -8,7 +8,9 @@ import { ContactComponent } from './contact/contact.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { ErrorComponent } from './error/error.component';
 
-const defaultImage: string = 'Candy Land';
+import { IMAGES } from './portfolio/image.model';
+
+const defaultImage: string = IMAGES[0].title;
 const name: string = 'Salome Brack';
 
 const routes: Routes = [

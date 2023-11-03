@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <div class="align-left">
+        <a class="title" routerLink="/">Salome Brack</a>
+    </div>
+
+    <div class="align-right">
+        <div id="top-menu">
+            <div class="top-menu" (click)="toPortfolio()">
+                <a class="no-click" routerLink="/portfolio" routerLinkActive="active-top" ariaCurrentWhenActive="page">
+                    portfolio
+                </a>
+            </div>
+            <a class="top-menu" routerLink="/about" routerLinkActive="active-top" ariaCurrentWhenActive="page">about me</a>
+            <a class="top-menu" routerLink="/contact" routerLinkActive="active-top" ariaCurrentWhenActive="page">contact</a>
+        </div>
+      
+        <div id="side-nav">
+            <div class="side-nav icon-button" [matMenuTriggerFor]="beforeMenu" role="button" aria-label="open page navigation">
+                <mat-icon>menu</mat-icon>
+            </div>
+            
+            <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <button class="side-nav-button" mat-menu-item (click)="toPortfolio()">
+                    <div class="no-click" routerLink="/portfolio" routerLinkActive="active-menu" ariaCurrentWhenActive="page">
+                        portfolio
+                    </div>
+                </button>
+                <button class="side-nav-button" mat-menu-item routerLink="/about" routerLinkActive="active-menu" ariaCurrentWhenActive="page">about me</button>
+                <button class="side-nav-button" mat-menu-item routerLink="/contact" routerLinkActive="active-menu" ariaCurrentWhenActive="page">contact</button>
+            </mat-menu>
+        </div>
+    </div>
+</div>
