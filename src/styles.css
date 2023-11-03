@@ -1,7 +1,47 @@
+:root {
+    --header-height: 70px;
+    --footer-height: 60px;
+
+    --color-background: #f0eded;
+    --color-light-gray: #787676;
+    --color-gray: #302f2f;
+    --color-pink: #c34f5c;
+    --color-yellow: #EDB845;
+    --color-transparent: rgba(13, 10, 10, 0.85);
+}
+
 html, body { height: 100%; }
 
 body {
     margin: 0;
     font-family: Montserrat, Verdana, sans-serif;
     font-display: swap;
+    scroll-behavior: smooth;
+    background-color: #cecaca;
+}
+
+.title {
+    font-family: Amatic SC, Montserrat, sans-serif;
+    font-display: block;
+    text-transform: capitalize;
+    font-size: 38px;
+}
+
+@media only screen and (min-width: 1600px) {
+    .footer-fill, .footer-pad, .footer { width: 1600px; margin-inline: auto; }
+}
+  
+.footer { height: var(--forgb(202, 65, 65)ight); margin-top: calc(var(--footer-height) * (-1)); }
+.footer-fill, .footer-pad { padding-bottom: var(--footer-height); background-color: var(--color-background); }
+.footer-fill { min-height: 100%; box-sizing: border-box; }
+
+.icon-button { cursor: pointer; color: var(--color-gray); line-height: 0; transition: color 200ms ease; }
+.icon-button { &:focus, &:hover { color: var(--color-pink); } }
+
+.background-image {
+    background-color: var(--color-gray);
+    transform: scale(1.1);
+    filter: blur(20px) brightness(75%);
+    object-fit: cover;
+    display: block;
 }

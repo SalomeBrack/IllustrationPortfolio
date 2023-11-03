@@ -1,0 +1,22 @@
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.header, .content {
+    width: 100%;
+    top: 0;
+    position: absolute;
+}
+
+.header {
+    z-index: 1;
+    height: var(--header-height);
+}
+
+.content {
+    padding-top: var(--header-height);
+    height: 100%;
+    box-sizing: border-box;
+}
