@@ -1,0 +1,130 @@
+.main-container {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 7/4;
+}
+
+.left-container, .right-container {
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    padding-block: auto;
+}
+
+.left-container {
+    width: 60%;
+    padding-bottom: 25px;
+}
+
+.right-container {
+    width: 40%;
+    justify-content: center;
+}
+
+.text-box {
+    margin-block: 50px;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+}
+
+.right-padding {
+    display: flex;
+    height: 95%;
+    aspect-ratio: 2/3;
+}
+
+.right-card {
+    display: flex;
+    width:100%;
+    align-items: center;
+    border-radius: 4px;
+    background-color: var(--pink);
+}
+
+.right-width {
+    width: 100%;
+    margin: auto;
+}
+
+.name-box {
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.photo-box {
+    width:70%;
+    aspect-ratio: 1;
+    margin-inline: auto auto;
+    font-size: 0px;
+}
+
+.photo {
+    width: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 750px) {
+    .main-container {
+        aspect-ratio: auto;
+    }
+    
+    .right-container, .left-container {
+        float: none;
+        height: auto;
+        width: 100%;
+        padding-top: 35px;
+    }
+
+    .right-padding {
+        height: auto;
+        aspect-ratio: auto;
+        display: flex;
+    }
+
+    .right-width {
+        margin: 50px;
+    }
+
+    .photo-box {
+        width: 50vw;
+    }
+}
+
+.bottom-spacing {
+    height: 40px;
+}
+
+h1 {
+    background-color: var(--gray);
+    color: white;
+    text-align: center;
+    font-size: medium;
+    font-weight: normal;
+    padding-block: 16px;
+    border-radius: 6px;
+    margin-inline: auto;
+}
+
+h2 {
+    margin-top: 60px;
+    line-height: 2;
+    color: var(--pink);
+    font-size: large;
+    font-weight: normal;
+}
+  
+h1, h2, p { margin-inline: 85px; }
+  
+@media only screen and (max-width: 750px) {
+    h1, h2, p { margin-inline: 40px; }
+}
+  
+@media only screen and (max-width: 300px) {
+    h1, h2, p { margin-inline: 15px; }
+}

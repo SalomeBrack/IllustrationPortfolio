@@ -27,18 +27,17 @@ button {
     border-radius: 6px;
     background-color: var(--pink);
     color: white;
-    padding-block: 8px;
-    padding-inline: 12px;
+    min-height: 40px;
+    padding-inline: 16px;
     font-size: medium;
     display: flex;
     align-items: center;
     transition: background-color 200ms ease;
 }
 
-
 button mat-icon {
     padding-right: 6px;
-    transform: scale(0.9);
+    transform: scale(0.9) translate(-15%, 0);
 }
 
 button {

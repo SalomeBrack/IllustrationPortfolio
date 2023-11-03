@@ -1,0 +1,65 @@
+:root {
+    --copy-width: 30px;
+}
+
+.footer-fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headline {
+    padding-top: 42px;
+    padding-bottom: 30px;
+}
+
+.text-box {
+    width: clamp(260px, 70%, 800px);
+    margin-inline: auto;
+}
+
+.text-box p {
+    margin-inline: auto;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: var(--copy-width);
+    padding-top: 40px;
+    padding-bottom: 160px;
+}
+
+.copy-button {
+    cursor: pointer;
+    text-align: right;
+    min-width: var(--copy-width);
+    color: var(--pink);
+    transform: scale(0.9);
+}
+
+.copy-button:hover {
+    color: var(--light-gray);
+}
+
+h1 {
+    background-color: var(--gray);
+    color: white;
+    text-align: center;
+    font-size: medium;
+    font-weight: normal;
+    padding-block: 16px;
+    border-radius: 6px;
+    margin-inline: auto;
+}
+  
+h1, p { margin-inline: 85px; }
+  
+@media only screen and (max-width: 750px) {
+    h1, p { margin-inline: 40px; }
+}
+  
+@media only screen and (max-width: 300px) {
+    h1, p { margin-inline: 15px; }
+}
