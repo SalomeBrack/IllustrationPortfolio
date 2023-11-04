@@ -46,13 +46,45 @@
 .next-button, .prev-button, .fullscreen-button {
   position: absolute;
   line-height: 0;
+}
+
+.next-button mat-icon, .prev-button mat-icon, .fullscreen-button {
   color: white;
+  border-radius: 6px;
+  margin-inline: 6px;
+}
+
+.fullscreen-button {
   transition: all 200ms ease;
+}
+
+.next-button mat-icon, .prev-button mat-icon {
+  transition: color 400ms ease, background-color 400ms ease;
+  transition-delay: 200ms, 200ms;
+}
+
+.next-button mat-icon, .prev-button mat-icon {
+  padding-block: 5px;
+  background-color: transparent;
 }
 
 @media (hover: hover) {
   .next-button, .prev-button, .fullscreen-button {
     cursor: pointer;
+  }
+  
+  .next-button:focus mat-icon, .prev-button:focus mat-icon, .fullscreen-button:focus,
+  .next-button:hover mat-icon, .prev-button:hover mat-icon, .fullscreen-button:hover {
+    color: var(--pink);
+  }
+  
+  .next-button:focus mat-icon, .prev-button:focus mat-icon,
+  .next-button:hover mat-icon, .prev-button:hover mat-icon {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .fullscreen-button:focus, .fullscreen-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -62,7 +94,6 @@
   padding: 6px;
   margin: 10px;
   background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
 }
 
 .next-button, .prev-button {
@@ -77,15 +108,6 @@
 
 .next-button { right: 0; justify-content: right; }
 .prev-button { left: 0; justify-content: left; }
-
-.next-button:focus, .prev-button:focus, .fullscreen-button:focus,
-.next-button:hover, .prev-button:hover, .fullscreen-button:hover {
-  color: var(--pink);
-}
-
-.fullscreen-button:focus, .fullscreen-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
 
 /* NgTemplate */
 .foreground-image {

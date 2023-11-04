@@ -19,7 +19,6 @@ import { ErrorComponent } from './error/error.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -42,8 +41,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     BrowserAnimationsModule,
     MatIconModule,
     MatMenuModule,
-    MatSnackBarModule,
-    MatTooltipModule
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
