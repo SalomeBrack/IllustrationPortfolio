@@ -1,0 +1,123 @@
+.wrapper, .layer, .image, .background {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.layer {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.footer {
+    margin-top: auto;
+    justify-content: right;
+    width: 100%;
+}
+
+.foreground {
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+    object-position: bottom left;
+}
+
+.align-left {
+    display: flex;
+    justify-content: right;
+}
+
+.box {
+    background-color: var(--transparent);
+    backdrop-filter: blur(10px);
+    width: clamp(200px, 54%, 650px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 400ms ease, transform 1600ms ease;
+}
+
+.box-animation {
+    transform: translate(100%, 0);
+    opacity: 0;
+}
+
+.inner-box {
+    width: 100%;
+    display: block;
+}
+
+.text-box {
+    width: 60%;
+    margin-inline: auto;
+}
+
+.title, .text {
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-size: 46px;
+    margin-top: 20px;
+}
+
+.text {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-aspect-ratio: 6/5) {
+    .box {
+        width: 100%;
+        height: clamp(350px, 54%, 500px);
+    }
+
+    .box-animation { transform: translate(0, -100%); }
+
+    @media only screen and (max-width: 310px) {
+        .box { height: clamp(380px, 65%, 500px); }
+        .text-box { width: 85%; }
+    }
+
+    @media only screen and (min-width: 700px) {
+        .box { height: clamp(315px, 39%, 500px); }
+
+        .inner-box {
+            display: flex;
+            grid-template-columns: auto;
+        }
+    
+        .text-box {
+            width: 75%;
+            margin-inline: 0;
+        }
+    
+        .title, .text {
+            text-align: start;
+            padding-left: 80px;
+            padding-right: 140px;
+        }
+    
+        .text { margin-bottom: 40px; }
+        .button { margin-bottom: 0; }
+    }
+}

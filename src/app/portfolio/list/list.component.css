@@ -1,0 +1,138 @@
+/* Image List */
+.wrapper {
+  padding-top: 10px;
+  padding-inline: 10px;
+}
+
+.grid-list-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .grid-list-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+.selected {
+  pointer-events: none;
+}
+
+.selected::after {
+  filter: var(--brightness-filter);
+  transition: var(--image-clicked-transition);
+}
+
+.zoom-in::after, .selected::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  background-size: cover;
+  transform-origin: center;
+}
+
+.zoom-in::after {
+  transition: var(--list-transitions);
+}
+
+.zoom-in:focus, .zoom-in:hover {
+  cursor: pointer;
+}
+
+.zoom-in:focus::after, .zoom-in:hover::after {
+  transform: scale(1.1);
+  filter: var(--brightness-filter);
+}
+
+.zoom-in:focus span, .zoom-in:hover span {
+  color: white;
+}
+
+.image {
+  --brightness-filter: brightness(40%);
+  --list-transitions: all 400ms ease;
+  --image-clicked-transition: all 600ms ease-out;
+
+  aspect-ratio: 1;
+  background-size: cover;
+  
+  position: relative;
+  overflow: hidden;
+  background-position: center center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--pink);
+  border-radius: 3%;
+}
+
+.image span {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: rgba(255, 255, 255, 0);
+  transition: var(--list-transitions);
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Text Box */
+.info-box {
+  color: var(--gray);
+  background-color: white;
+  padding: 24px;
+  border: 1px solid #beb7b7;
+  border-radius: 6px;
+  transition: height 1000ms ease;
+}
+
+.info-title {
+  font-size: large;
+  margin-bottom: 20px;
+}
+
+.info-description {
+  --max-lines: 2;
+  --line-height: 1.5;
+
+  overflow: hidden;
+  line-height: var(--line-height);
+}
+
+.show-less {
+  height: calc(var(--max-lines) * 1em * var(--line-height));
+}
+
+.show-more {
+  min-height: calc(var(--max-lines) * 1em * var(--line-height));
+}
+
+.expand-btn {
+  color: var(--light-gray);
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.expand-btn:hover {
+  color: var(--gray);
+}

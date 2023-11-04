@@ -1,0 +1,94 @@
+/* Images */
+.wrapper, .fullscreen-background {
+  background-color: var(--gray);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fullscreen {
+  position: fixed;
+  width: 100vw;
+  height:  100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.layer-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+/* Slide Animations */
+.invisible { opacity: 0; }
+.left { transform: translate(-100%, 0); }
+.right { transform: translate(100%, 0); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .animated { transition: all 200ms ease-out; }
+}
+
+/* Buttons */
+.next-button, .prev-button, .fullscreen-button {
+  position: absolute;
+  line-height: 0;
+  color: white;
+  transition: all 200ms ease;
+}
+
+@media (hover: hover) {
+  .next-button, .prev-button, .fullscreen-button {
+    cursor: pointer;
+  }
+}
+
+.fullscreen-button {
+  top: 0;
+  right: 0;
+  padding: 6px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+}
+
+.next-button, .prev-button {
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  outline: none;
+}
+
+.next-button { right: 0; justify-content: right; }
+.prev-button { left: 0; justify-content: left; }
+
+.next-button:focus, .prev-button:focus, .fullscreen-button:focus,
+.next-button:hover, .prev-button:hover, .fullscreen-button:hover {
+  color: var(--pink);
+}
+
+.fullscreen-button:focus, .fullscreen-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* NgTemplate */
+.foreground-image {
+  display: block;
+  object-fit: contain;
+}

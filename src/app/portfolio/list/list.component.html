@@ -1,1 +1,19 @@
-<p>list works!</p>
+<div class="wrapper">
+    <div class="info-box">
+        <div class="info-title">{{imageList[index].title}}</div>
+        <div id="myDescription" class="info-description" [ngClass]="expand ? 'show-more' : 'show-less'"></div>
+      
+        <button *ngIf="!expand" class="expand-btn" (click)="toggleText()">show more&nbsp;<mat-icon>arrow_drop_down</mat-icon></button>
+        <button *ngIf="expand" class="expand-btn" (click)="toggleText()">show less&nbsp;<mat-icon>arrow_drop_up</mat-icon></button>
+    </div>
+</div>
+  
+<div class="grid-list-container">
+    <div *ngFor="let image of imageList; index as i; trackBy:identify">
+        <div class="image" (click)="goToClicked(image.title)" [ngClass]="i == index ? 'selected' : 'zoom-in'"
+            [ngStyle]="{'background-image': image.thumb ? 'url('+image.thumb+')' : 'url('+image.mobile+')'}">
+
+            <span class="no-select">{{ image.title }}</span>
+        </div>
+    </div>
+</div>

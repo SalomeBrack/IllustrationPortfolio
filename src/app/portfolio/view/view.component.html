@@ -1,1 +1,40 @@
-<p>view works!</p>
+<div [ngClass]="fullscreen ? 'fullscreen' : 'wrapper'">
+    <div class="layer-box">
+        <div class="layer" [ngClass]="
+            loading ? 'center' : (animation == 'prev') ? 'right animated' : (animation == 'next') ? 'left animated' : 'center'
+        ">
+            <ng-container *ngTemplateOutlet="imageViewer; context: { $implicit: indexTemp }"></ng-container>
+        </div>
+        
+        <div class="layer" [ngClass]="
+            loading ? ((animation == 'fade') ? 'invisible' : (animation == 'prev') ? 'left' : (animation == 'next') ? 'right' : '') : 'animated'
+        ">
+            <ng-container *ngTemplateOutlet="imageViewer; context: { $implicit: index }"></ng-container>
+        </div>
+        
+        <div class="prev-button" (click)="goToPreviousPage()" role="button" aria-label="previous image">
+            <mat-icon>keyboard_arrow_left</mat-icon>
+        </div>
+
+        <div class="next-button" (click)="goToNextPage()" role="button" aria-label="next image">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+        </div>
+
+        <div class="fullscreen-button" (click)="toggleFullscreen()" role="button" aria-label="toggle fullscreen">
+            <mat-icon>
+                <div *ngIf="fullscreen; else open">fullscreen_exit</div>
+                <ng-template #open>fullscreen</ng-template>
+            </mat-icon>
+        </div>
+    </div>
+</div>
+
+<ng-template #imageViewer let-i>
+    <div class="layer-box">
+        <img *ngIf="!fullscreen" class="layer background-image" alt="image not found"
+            [src]="mobile && imageList[i].mobile ? imageList[i].mobile : imageList[i].link" />
+            
+        <img id="image" class="layer foreground-image" [ngClass]="fullscreen ? 'fullscreen-background' : ''" alt="image not found"
+            [src]="mobile && imageList[i].mobile ? imageList[i].mobile : imageList[i].link" (load)="i == index ? imageLoaded() : {}"/>
+    </div>
+</ng-template>

@@ -1,5 +1,27 @@
 <div class="wrapper">
-    
+    <img class="layer background-image" [src]="screen <= 450 && image.mobile ? image.mobile : image.link" alt="background">
+
+    <div id="myFrame" class="layer foreground">
+        <img id="myImage" class="image" [src]="screen <= 300 && image.mobile ? image.mobile : image.link" alt="background image">
+    </div>
+        
+    <div class="layer align-left">
+        <div id="myBox" class="box">
+            <div class="inner-box">
+                <div class="text-box">
+                    <div class="title">welcome page</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    </div>
+                </div>
+                <div class="button">
+                    <button mat-raised-button color="primary" (click)="navigateToPortfolio()">
+                        view portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="footer"><app-footer></app-footer></div>
