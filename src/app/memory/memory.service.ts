@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IMAGES } from '../portfolio/image.model';
+import { IMAGES } from 'src/image.model';
 
 @Injectable({
   providedIn: 'root'

@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { Image, IMAGES } from '../image.model';
+import { Image, IMAGES } from 'src/image.model';
 import { Title } from '@angular/platform-browser';
 import { MemoryService } from 'src/app/memory/memory.service';
 

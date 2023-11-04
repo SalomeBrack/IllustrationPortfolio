@@ -101,6 +101,7 @@
 }
 
 .info-title {
+  color: var(--pink);
   font-size: large;
   margin-bottom: 20px;
 }

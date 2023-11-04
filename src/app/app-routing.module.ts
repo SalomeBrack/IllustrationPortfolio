@@ -8,7 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { ErrorComponent } from './error/error.component';
 
-import { IMAGES } from './portfolio/image.model';
+import { IMAGES } from 'src/image.model';
 
 const defaultImage: string = IMAGES[0].title;
 const name: string = 'Salome Brack';

@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IMAGES, Image } from '../portfolio/image.model';
+import { IMAGES, Image } from 'src/image.model';
 
 @Component({
   selector: 'app-home',
