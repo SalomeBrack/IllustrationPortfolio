@@ -49,10 +49,12 @@
 .icon-button { &:focus, &:hover { color: var(--pink); } }
 
 #top-menu { display: flex; }
+#lang-nav { display: flex; }
 #side-nav { display: none; }
 
 @media (max-width: 600px) {
     #top-menu { display: none; }
+    #lang-nav { display: none; }
     #side-nav { display: flex; }
 }
 

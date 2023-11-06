@@ -4,6 +4,15 @@
   "newProjectRoot": "projects",
   "projects": {
     "illustration-portfolio": {
+      "i18n": {
+        "sourceLocale": {
+          "code": "en-US",
+          "baseHref": "/"
+        },
+        "locales": {
+          "de": "src/locale/messages.de.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -47,6 +56,9 @@
               ],
               "outputHashing": "all"
             },
+            "de": {
+              "localize": ["de"]
+            },
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -64,6 +76,9 @@
             "production": {
               "browserTarget": "illustration-portfolio:build:production"
             },
+            "de": {
+              "browserTarget": "illustration-portfolio:build:development,de"
+            },
             "development": {
               "browserTarget": "illustration-portfolio:build:development"
             }
@@ -73,7 +88,9 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "illustration-portfolio:build"
+            "browserTarget": "illustration-portfolio:build",
+            "format": "xlf",
+            "outputPath": "src/locale"
           }
         },
         "test": {
