@@ -8,6 +8,8 @@ import { IMAGES, Image } from 'src/image.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public loaded: boolean = false;
+
   public image: Image = IMAGES[0];
   public mobile: boolean = false;
   public screen: number = 0;
@@ -22,6 +24,10 @@ export class HomeComponent implements OnInit {
   private frameAspectRatio: number = 0;
 
   constructor(private router: Router) { }
+
+  imageLoaded() {
+    this.loaded = true;
+  }
 
   imageCover() {
     const image = document.getElementById("myImage")!;
