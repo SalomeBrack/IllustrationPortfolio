@@ -14,12 +14,6 @@
             <a class="top-menu" routerLink="/contact" routerLinkActive="active-top" ariaCurrentWhenActive="page">contact</a>
         </div>
       
-        <div id="lang-nav">
-            <div class="side-nav icon-button" [matMenuTriggerFor]="languageMenu" role="button" aria-label="open page navigation">
-                <mat-icon>language</mat-icon>
-            </div>
-        </div>
-      
         <div id="side-nav">
             <div class="side-nav icon-button" [matMenuTriggerFor]="pageMenu" role="button" aria-label="open page navigation">
                 <mat-icon>menu</mat-icon>
@@ -33,12 +27,6 @@
                 </button>
                 <button class="side-nav-button" mat-menu-item routerLink="/about" routerLinkActive="active-menu" ariaCurrentWhenActive="page">about me</button>
                 <button class="side-nav-button" mat-menu-item routerLink="/contact" routerLinkActive="active-menu" ariaCurrentWhenActive="page">contact</button>
-                <button class="side-nav-button" mat-menu-item [matMenuTriggerFor]="languageMenu">language</button>
-            </mat-menu>
-
-            <mat-menu #languageMenu="matMenu">
-                <a class="side-nav-button" mat-menu-item href="/">english</a>
-                <a class="side-nav-button" mat-menu-item href="/de">deutsch</a>
             </mat-menu>
         </div>
     </div>
