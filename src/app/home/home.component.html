@@ -3,8 +3,8 @@
         [src]="loaded ? (screen <= 450 && image.mobile ? image.mobile : image.link) : 'assets/low.jpg'">
 
     <div id="myFrame" class="layer foreground">
-        <img id="myImage" class="image" (load)="imageLoaded()"
-            [src]="screen <= 300 && image.mobile ? image.mobile : image.link" alt="background image">
+        <img id="myImage" class="image" (load)="imageLoaded()" alt="background image"
+            [src]="screen <= 300 && image.mobile ? image.mobile : image.link">
     </div>
         
     <div class="layer align-left">
